@@ -23,11 +23,13 @@ public class InicioSesion extends JFrame{
                 String contraIngresada = contraseña.getText();
                 if(validarUsuario(usuarioIngresado,contraIngresada)){
                     JOptionPane.showMessageDialog(null,"Inicio de sesion correcto");
-                    Menu menu =  new Menu();
-                    menu.iniciar();
+                    Registro registro =  new Registro();
+                    registro.iniciar();
                     dispose();
                 }else {
                     JOptionPane.showMessageDialog(null,"Inicio de sesion incorrecto");
+                    usuario.setText("");
+                    contraseña.setText("");
                 }
             }
         });

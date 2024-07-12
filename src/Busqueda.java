@@ -1,14 +1,68 @@
 import javax.swing.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.*;
 
 public class Busqueda extends JFrame {
     private JPanel panelBusqueda;
+    private JTextField cedula;
+    private JButton buscarButton;
+    private JLabel Resultado;
+    private JButton loginButton;
+    private JButton registrarPacienteButton;
 
     public Busqueda(){
         super("Busqueda de pacientes");
         setContentPane(panelBusqueda);
+        buscarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    buscar();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InicioSesion inicioSesion =  new InicioSesion();
+                inicioSesion.iniciar();
+                dispose();
+            }
+        });
+        registrarPacienteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Registro registro = new Registro();
+                registro.iniciar();
+                dispose();
+            }
+        });
+    }
+    public void buscar() throws SQLException {
+        Connection connection = conexion();
+        String query = "SELECT * FROM PACIENTE WHERE cedula = ?";
+        PreparedStatement pstmt = connection.prepareStatement(query);
+        pstmt.setString(1,cedula.getText());
+        pstmt.executeQuery();
+        ResultSet resultSet = pstmt.getResultSet();
+        if(resultSet.next()){
+            StringBuilder datos = new StringBuilder("<html>");
+            datos.append("<b>Cedula:</b> ").append(resultSet.getString("cedula")).append("<br>");
+            datos.append("<b>N° Historial Clinico:</b> ").append(resultSet.getInt("n_historial_clinico")).append("<br>");
+            datos.append("<b>Nombre:</b> ").append(resultSet.getString("nombre")).append("<br>");
+            datos.append("<b>Apellido:</b> ").append(resultSet.getString("apellido")).append("<br>");
+            datos.append("<b>Teléfono:</b> ").append(resultSet.getString("telefono")).append("<br>");
+            datos.append("<b>Edad:</b> ").append(resultSet.getInt("edad")).append("<br>");
+            datos.append("<b>Descripcion Enfermedad:</b> ").append(resultSet.getString("descripcion_enfermedad")).append("<br>");
+            datos.append("</html>");
+            Resultado.setText(datos.toString());
+        }else {
+            Resultado.setText("Paciente NO Encontrado");
+            cedula.setText("");
+        }
     }
     public void iniciar(){
         setVisible(true);
