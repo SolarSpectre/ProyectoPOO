@@ -10,6 +10,8 @@ public class Busqueda extends JFrame {
     private JLabel Resultado;
     private JButton loginButton;
     private JButton registrarPacienteButton;
+    private JButton actualizarRegistrosButton;
+    private JButton eliminarRegistrosButton;
 
     public Busqueda(){
         super("Busqueda de pacientes");
@@ -37,6 +39,22 @@ public class Busqueda extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Registro registro = new Registro();
                 registro.iniciar();
+                dispose();
+            }
+        });
+        eliminarRegistrosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Eliminar eliminar = new Eliminar();
+                eliminar.iniciar();
+                dispose();
+            }
+        });
+        actualizarRegistrosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Actualizar actualizar =  new Actualizar();
+                actualizar.iniciar();
                 dispose();
             }
         });
