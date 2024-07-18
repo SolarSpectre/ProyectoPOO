@@ -10,8 +10,11 @@ public class Eliminar extends JFrame{
     private JTextField cedula;
     private JButton eliminarRegistroButton;
     private JButton volverAlLoginButton;
+    private JPanel panelEliminar;
 
     public Eliminar() {
+        super("Eliminar Registros");
+        setContentPane(panelEliminar);
         eliminarRegistroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

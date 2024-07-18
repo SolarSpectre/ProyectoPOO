@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="" />
+    <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Actualizar.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actualizar.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actualizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actualizar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Eliminar.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Eliminar.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Eliminar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Eliminar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +36,7 @@
     "OverrideImplement.generate.javadoc": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/josep/Downloads/CorreccionPrueba_CazaJoseph/PruebaPOO/src",
     "onboarding.tips.debug.path": "C:/Users/POO/IdeaProjects/PruebaPOO/src/Main.java",

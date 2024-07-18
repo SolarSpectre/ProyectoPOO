@@ -16,8 +16,11 @@ public class Actualizar extends JFrame{
     private JTextField telefono;
     private JTextField edad;
     private JTextField descripcion;
+    private JPanel panelBuscar;
 
     public Actualizar() {
+        super("Actualizar Registros");
+        setContentPane(panelBuscar);
         volverAlLoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
