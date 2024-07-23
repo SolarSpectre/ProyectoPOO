@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class Actualizar extends JFrame{
     private JButton actualizarPacienteButton;
-    private JButton volverAlLoginButton;
+    private JButton volverAlMenuButton;
     private JTextField cedula;
     private JTextField historial;
     private JTextField nombre;
@@ -21,11 +21,11 @@ public class Actualizar extends JFrame{
     public Actualizar() {
         super("Actualizar Registros");
         setContentPane(panelBuscar);
-        volverAlLoginButton.addActionListener(new ActionListener() {
+        volverAlMenuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                InicioSesion inicioSesion =  new InicioSesion();
-                inicioSesion.iniciar();
+                MenuPacientes menuPacientes = new MenuPacientes();
+                menuPacientes.iniciar();
                 dispose();
             }
         });

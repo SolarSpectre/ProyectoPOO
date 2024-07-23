@@ -7,7 +7,7 @@ import java.sql.*;
 public class InicioSesion extends JFrame{
     private JPanel inicioSesionPanel;
     private JTextField usuario;
-    private JTextField contraseña;
+    private JPasswordField contraseña;
     private JButton iniciarSesionButton;
     private JLabel usLabel;
     private JLabel contrLabel;
@@ -23,9 +23,6 @@ public class InicioSesion extends JFrame{
                 String contraIngresada = contraseña.getText();
                 if(validarUsuario(usuarioIngresado,contraIngresada)){
                     JOptionPane.showMessageDialog(null,"Inicio de sesion correcto");
-                    Registro registro =  new Registro();
-                    registro.iniciar();
-                    dispose();
                 }else {
                     JOptionPane.showMessageDialog(null,"Inicio de sesion incorrecto");
                     usuario.setText("");
@@ -41,22 +38,35 @@ public class InicioSesion extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
     public Connection conexion() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/sistema_hospitalario";
-        String user = "root";
-        String password = "12345";
+        String url = "jdbc:mysql://ujkhbignzbkn6drb:wt4yA7DMNsjsESDuPDYj@bzur1xo4hnmfvo0nrqz6-mysql.services.clever-cloud.com:3306/bzur1xo4hnmfvo0nrqz6";
+        String user = "ujkhbignzbkn6drb";
+        String password = "wt4yA7DMNsjsESDuPDYj";
         return DriverManager.getConnection(url,user,password);
     }
     public boolean validarUsuario(String usuario, String contraseña){
         try {
             Connection connection = conexion();
-            String query = "SELECT * FROM USUARIO WHERE username = ? and password = ?";
+            String query = "SELECT * FROM Usuario WHERE usuario = ? and contraseña = ?";
             PreparedStatement pstmt = connection.prepareStatement(query);
             pstmt.setString(1,usuario);
             pstmt.setString(2,contraseña);
             pstmt.executeQuery();
             ResultSet resultSet = pstmt.getResultSet();
             if(resultSet.next()){
+                String rolUsuario = resultSet.getString("rol");
                 connection.close();
+
+                if (rolUsuario.equalsIgnoreCase("administrador")) {
+                    PantallaAdministrador pantallaAdministrador = new PantallaAdministrador();
+                    pantallaAdministrador.iniciar();
+                } else if (rolUsuario.equalsIgnoreCase("personal medico")) {
+                    PantallaPersonalMedico pantallaPersonalMedico = new PantallaPersonalMedico();
+                    pantallaPersonalMedico.iniciar();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Rol de usuario no válido");
+                }
+
+                dispose();
                 return true;
             }
             else {
@@ -68,5 +78,6 @@ public class InicioSesion extends JFrame{
         }
 
     }
+
 
 }

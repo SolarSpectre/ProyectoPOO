@@ -42,36 +42,12 @@
           <text value="Buscar"/>
         </properties>
       </component>
-      <component id="e5ab5" class="javax.swing.JButton" binding="loginButton">
+      <component id="2fdc4" class="javax.swing.JButton" binding="volverAlMenuButton">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Login"/>
-        </properties>
-      </component>
-      <component id="5049" class="javax.swing.JButton" binding="registrarPacienteButton" default-binding="true">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Registrar Paciente"/>
-        </properties>
-      </component>
-      <component id="2fdc4" class="javax.swing.JButton" binding="actualizarRegistrosButton" default-binding="true">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Actualizar Registros"/>
-        </properties>
-      </component>
-      <component id="8fdc3" class="javax.swing.JButton" binding="eliminarRegistrosButton" default-binding="true">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Eliminar Registros"/>
+          <text value="Volver al Menu"/>
         </properties>
       </component>
     </children>

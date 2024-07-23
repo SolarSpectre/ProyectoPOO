@@ -13,7 +13,7 @@ public class Registro extends JFrame {
     private JTextField telefono;
     private JTextField edad;
     private JTextField descripEnfermedad;
-    private JButton buscarButton;
+    private JButton volverAlMenuButton;
 
     public Registro(){
         super("Registro de Pacientes");
@@ -28,11 +28,11 @@ public class Registro extends JFrame {
                 }
             }
         });
-        buscarButton.addActionListener(new ActionListener() {
+        volverAlMenuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Busqueda busqueda =  new Busqueda();
-                busqueda.iniciar();
+                MenuPacientes menuPacientes = new MenuPacientes();
+                menuPacientes.iniciar();
                 dispose();
             }
         });

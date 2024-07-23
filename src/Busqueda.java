@@ -8,11 +8,7 @@ public class Busqueda extends JFrame {
     private JTextField cedula;
     private JButton buscarButton;
     private JLabel Resultado;
-    private JButton loginButton;
-    private JButton registrarPacienteButton;
-    private JButton actualizarRegistrosButton;
-    private JButton eliminarRegistrosButton;
-
+    private JButton volverAlMenuButton;
     public Busqueda(){
         super("Busqueda de pacientes");
         setContentPane(panelBusqueda);
@@ -26,35 +22,11 @@ public class Busqueda extends JFrame {
                 }
             }
         });
-        loginButton.addActionListener(new ActionListener() {
+        volverAlMenuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                InicioSesion inicioSesion =  new InicioSesion();
-                inicioSesion.iniciar();
-                dispose();
-            }
-        });
-        registrarPacienteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Registro registro = new Registro();
-                registro.iniciar();
-                dispose();
-            }
-        });
-        eliminarRegistrosButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Eliminar eliminar = new Eliminar();
-                eliminar.iniciar();
-                dispose();
-            }
-        });
-        actualizarRegistrosButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Actualizar actualizar =  new Actualizar();
-                actualizar.iniciar();
+                MenuPacientes menuPacientes = new MenuPacientes();
+                menuPacientes.iniciar();
                 dispose();
             }
         });

@@ -16,12 +16,12 @@
           <text value="Cedula:"/>
         </properties>
       </component>
-      <component id="bb19b" class="javax.swing.JButton" binding="volverAlLoginButton" default-binding="true">
+      <component id="bb19b" class="javax.swing.JButton" binding="volverAlMenuButton">
         <constraints>
           <grid row="2" column="2" row-span="7" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Volver al Login"/>
+          <text value="Volver al Menu"/>
         </properties>
       </component>
       <component id="33219" class="javax.swing.JLabel">

@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class Eliminar extends JFrame{
     private JTextField cedula;
     private JButton eliminarRegistroButton;
-    private JButton volverAlLoginButton;
+    private JButton volverAlMenuButton;
     private JPanel panelEliminar;
 
     public Eliminar() {
@@ -25,11 +25,11 @@ public class Eliminar extends JFrame{
                 }
             }
         });
-        volverAlLoginButton.addActionListener(new ActionListener() {
+        volverAlMenuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                InicioSesion inicioSesion =  new InicioSesion();
-                inicioSesion.iniciar();
+                MenuPacientes menuPacientes = new MenuPacientes();
+                menuPacientes.iniciar();
                 dispose();
             }
         });
