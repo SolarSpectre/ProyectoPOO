@@ -21,7 +21,9 @@ public class PantallaAdministrador extends JFrame{
         gestionarPersonalMedicoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                MenuMedico menuMedico = new MenuMedico();
+                menuMedico.iniciar();
+                dispose();
             }
         });
     }

@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MenuPacientes.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MenuPacientes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PantallaAdministrador.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PantallaAdministrador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PantallaPersonalMedico.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PantallaPersonalMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_9_0_0.xml" beforeDir="false" />
+    <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="Agrego base de datos en la nube">
+      <change afterPath="$PROJECT_DIR$/src/MenuMedico.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MenuMedico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VerReportes.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VerReportes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actualizar.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actualizar.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actualizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actualizar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Busqueda.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Busqueda.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Busqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Busqueda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eliminar.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Eliminar.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eliminar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Eliminar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InicioSesion.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/InicioSesion.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InicioSesion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registro.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registro.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PantallaAdministrador.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/PantallaAdministrador.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PantallaAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PantallaAdministrador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +43,9 @@
     "Application.Main.executor": "Run",
     "OverrideImplement.generate.javadoc": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "272",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/josep/Downloads/mysql-connector-j-9.0.0/mysql-connector-j-9.0.0/mysql-connector-j-9.0.0/mysql-connector-j-9.0.0.jar",
@@ -80,6 +72,19 @@
       <option name="presentableId" value="Default" />
       <updated>1720800861704</updated>
     </task>
+    <task id="LOCAL-00001" summary="Agrego base de datos en la nube">
+      <option name="closed" value="true" />
+      <created>1721770396140</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721770396140</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Agrego base de datos en la nube" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego base de datos en la nube" />
   </component>
 </project>
