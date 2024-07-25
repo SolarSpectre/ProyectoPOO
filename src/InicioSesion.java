@@ -4,6 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
+/**
+ * Inicio de Sesion con Base de Datos en la nube
+ * @author Joseph Caza
+ */
 public class InicioSesion extends JFrame{
     private JPanel inicioSesionPanel;
     private JTextField usuario;
@@ -12,6 +16,9 @@ public class InicioSesion extends JFrame{
     private JLabel usLabel;
     private JLabel contrLabel;
 
+    /**
+     * Metodo constructor
+     */
     public InicioSesion() {
         super("Inicio de Sesion");
         setContentPane(inicioSesionPanel);
@@ -31,6 +38,10 @@ public class InicioSesion extends JFrame{
             }
         });
     }
+
+    /**
+     * Metodo que define las caracteristicas de la pantalla
+     */
     public void iniciar(){
         setVisible(true);
         setSize(400,400);

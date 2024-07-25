@@ -6,6 +6,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Clase para eliminar Registros de Pacientes de la base de datos
+ */
 public class Eliminar extends JFrame{
     private JTextField cedula;
     private JButton eliminarRegistroButton;

@@ -6,6 +6,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Clase para actualizar el registro de un Paciente
+ */
 public class Actualizar extends JFrame{
     private JButton actualizarPacienteButton;
     private JButton volverAlMenuButton;
@@ -33,15 +36,14 @@ public class Actualizar extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    actualizar();
+                    actualizar(conexion());
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
             }
         });
     }
-    public void actualizar() throws SQLException {
-        Connection connection = conexion();
+    public void actualizar(Connection connection) throws SQLException {
         String query = "UPDATE PACIENTE SET n_historial_clinico=?, nombre=?, apellido=?, telefono=?, edad=?, descripcion_enfermedad=? WHERE cedula=?";
         PreparedStatement pstmt = connection.prepareStatement(query);
         pstmt.setInt(1, Integer.parseInt(historial.getText()));

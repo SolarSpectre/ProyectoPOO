@@ -3,6 +3,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
+/**
+ * Clase para registrar pacientes
+ */
 public class Registro extends JFrame {
     private JPanel panelRegistro;
     private JButton ingresarPacienteButton;
@@ -43,6 +46,11 @@ public class Registro extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
+
+    /**
+     *
+     * @throws SQLException
+     */
     public void ingresar() throws SQLException {
         Connection connection = conexion();
         String query = "INSERT INTO PACIENTE (cedula, n_historial_clinico, nombre, apellido, telefono, edad, descripcion_enfermedad) VALUES(?,?,?,?,?,?,?)";

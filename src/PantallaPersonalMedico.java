@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Menu que se ejecuta al iniciar sesion como personal medico
+ */
 public class PantallaPersonalMedico extends JFrame{
     private JButton citasButton;
     private JButton tratamientosButton;
