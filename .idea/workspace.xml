@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="Agrego base de datos en la nube">
+    <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="Agrego comentarios descriptivos en las clases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actualizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actualizar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Busqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Busqueda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eliminar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Eliminar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InicioSesion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuPacientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuPacientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PantallaAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PantallaAdministrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PantallaPersonalMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PantallaPersonalMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VerReportes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VerReportes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,11 +73,20 @@
       <option name="project" value="LOCAL" />
       <updated>1721770396140</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Agrego comentarios descriptivos en las clases">
+      <option name="closed" value="true" />
+      <created>1721913135144</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721913135144</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Agrego base de datos en la nube" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego base de datos en la nube" />
+    <MESSAGE value="Agrego comentarios descriptivos en las clases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego comentarios descriptivos en las clases" />
   </component>
 </project>
