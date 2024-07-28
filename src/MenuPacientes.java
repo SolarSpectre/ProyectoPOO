@@ -11,6 +11,7 @@ public class MenuPacientes extends JFrame{
     private JButton actualizarPacientesButton;
     private JButton buscarPacientesButton;
     private JButton eliminarRegistroPacientesButton;
+    private JButton volverAlMenuPrincipalButton;
 
     public MenuPacientes() {
         super("Menu Pacientes");
@@ -44,6 +45,19 @@ public class MenuPacientes extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 Actualizar actualizar = new Actualizar();
                 actualizar.iniciar();
+                dispose();
+            }
+        });
+        volverAlMenuPrincipalButton.addActionListener(new ActionListener() {
+            /**
+             * Invocado al hacer clic en volver
+             *
+             * @param e evento clic
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PantallaAdministrador pantallaAdministrador = new PantallaAdministrador();
+                pantallaAdministrador.iniciar();
                 dispose();
             }
         });

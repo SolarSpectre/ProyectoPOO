@@ -70,7 +70,7 @@ public class Actualizar extends JFrame{
 
     public Connection conexion() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sistema_hospitalario";
-        String user = "root";
+        String user = "root2";
         String password = "12345";
         return DriverManager.getConnection(url,user,password);
     }
