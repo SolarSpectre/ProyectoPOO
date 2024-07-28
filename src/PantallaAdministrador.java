@@ -1,11 +1,14 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Menu que se ejecuta al iniciar sesion como administrador
+ */
 public class PantallaAdministrador extends JFrame{
     private JButton gestionarPacientesButton;
     private JButton gestionarPersonalMedicoButton;
     private JPanel menuAdmin;
+
 
     public PantallaAdministrador() {
         super("Menu Administrador");

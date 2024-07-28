@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Menu que se ejecuta al hacer clic en gestionar pacientes
+ */
 public class MenuPacientes extends JFrame{
     private JPanel menuPacientes;
     private JButton registrarPacientesButton;

@@ -3,6 +3,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
+/**
+ * Clase para Buscar Pacientes por el numero de cedula
+ */
 public class Busqueda extends JFrame {
     private JPanel panelBusqueda;
     private JTextField cedula;
@@ -16,7 +19,7 @@ public class Busqueda extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    buscar();
+                    buscar(conexion());
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -31,8 +34,12 @@ public class Busqueda extends JFrame {
             }
         });
     }
-    public void buscar() throws SQLException {
-        Connection connection = conexion();
+    /**
+     * Metodo para buscar pacientes
+     * @param connection
+     * @throws SQLException
+     */
+    public void buscar(Connection connection) throws SQLException {
         String query = "SELECT * FROM PACIENTE WHERE cedula = ?";
         PreparedStatement pstmt = connection.prepareStatement(query);
         pstmt.setString(1,cedula.getText());

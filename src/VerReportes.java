@@ -3,7 +3,10 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-
+/**
+ * Ver Reportes Estadisticos en el modulo de Administrador
+ *
+ */
 public class VerReportes extends JFrame{
     private JPanel verCitasPanel;
     private JTable citas;
@@ -27,23 +30,39 @@ public class VerReportes extends JFrame{
             }
         });
     }
+
+    /**
+     * Metodo que inicia los atributos que tendra la ventana
+     */
     public void iniciar(){
         setVisible(true);
-        setSize(800, 600);
+        setSize(1000, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
+
+    /**
+     *
+     * @return La conexion a la base de datos
+     * @throws SQLException
+     */
     public Connection conexion() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sistema_hospitalario";
         String user = "root2";
         String password = "12345";
         return DriverManager.getConnection(url,user,password);
     }
+
+    /**
+     *
+     * @param connection
+     * @throws SQLException
+     */
     private void agregarTablaCitas(Connection connection) throws SQLException {
         String query = "SELECT * FROM Reporte_Citas_Por_Medico";
         String[] columnas = {"Medico", "Total Citas"};
         DefaultTableModel model = new DefaultTableModel(columnas, 0);
-
+        model.addRow(columnas);
         try (PreparedStatement stmt = connection.prepareStatement(query);
              ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
@@ -54,11 +73,16 @@ public class VerReportes extends JFrame{
         citas.setModel(model);
     }
 
+    /**
+     *
+     * @param connection
+     * @throws SQLException
+     */
     private void agregarTablaTratamientos(Connection connection) throws SQLException {
         String query = "SELECT * FROM Reporte_Pacientes_Tratamientos";
         String[] columnas = {"Cedula", "Nombre", "Apellido", "Medicamento", "Dosis", "Duracion"};
         DefaultTableModel model = new DefaultTableModel(columnas, 0);
-
+        model.addRow(columnas);
         try (PreparedStatement stmt = connection.prepareStatement(query);
              ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {

@@ -3,6 +3,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
+/**
+ * Menu de Gestion de Medicos y Reportes Estadisticos
+ */
 public class MenuMedico extends JFrame{
     private JButton verReportesButton;
     private JButton buscarPersonalMedicoButton;
