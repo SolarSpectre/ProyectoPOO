@@ -10,6 +10,7 @@ public class MenuMedico extends JFrame{
     private JButton verReportesButton;
     private JButton buscarPersonalMedicoButton;
     private JPanel menuMedico;
+    private JButton volverAlMenuPrincipalButton;
 
     public MenuMedico() {
         super("Menu Medicos");
@@ -29,13 +30,28 @@ public class MenuMedico extends JFrame{
         });
         buscarPersonalMedicoButton.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * Invocado al hacer clic
              *
-             * @param e the event to be processed
+             * @param e el evento clic
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                AgregarMedico agregarMedico = new AgregarMedico();
+                agregarMedico.iniciar();
+                dispose();
+            }
+        });
+        volverAlMenuPrincipalButton.addActionListener(new ActionListener() {
+            /**
+             * Boton para volver al menu principal
+             *
+             * @param e el evento a procesar
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PantallaAdministrador pantallaAdministrador = new PantallaAdministrador();
+                pantallaAdministrador.iniciar();
+                dispose();
             }
         });
     }

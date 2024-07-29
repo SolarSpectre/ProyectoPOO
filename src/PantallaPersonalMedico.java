@@ -16,13 +16,17 @@ public class PantallaPersonalMedico extends JFrame{
         tratamientosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Tratamientos tratamientos = new Tratamientos();
+                tratamientos.iniciar();
+                dispose();
             }
         });
         citasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Citas citas = new Citas();
+                citas.iniciar();
+                dispose();
             }
         });
     }

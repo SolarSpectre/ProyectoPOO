@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="Agrego comentarios descriptivos en las clases">
-      <change afterPath="$PROJECT_DIR$/src/AgregarMedico.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AgregarMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_9_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_9_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Citas.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Citas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tratamientos.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tratamientos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actualizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actualizar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Busqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Busqueda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eliminar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Eliminar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AgregarMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgregarMedico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuMedico.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMedico.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuPacientes.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuPacientes.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuPacientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuPacientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PantallaPersonalMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PantallaPersonalMedico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
