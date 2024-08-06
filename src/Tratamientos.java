@@ -35,7 +35,6 @@ public class Tratamientos {
         } finally {
             try {
                 if (pstmt != null) pstmt.close();
-                if (connection != null) conexionBDDLocal.cerrarConexion();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

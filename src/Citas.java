@@ -18,7 +18,7 @@ public class Citas {
             pstmt = connection.prepareStatement(query);
             pstmt.setString(1, cedula_paciente);
             pstmt.setInt(2, id_usuario);
-            pstmt.setTimestamp(3, Timestamp.valueOf(fecha));
+            pstmt.setTimestamp(3, Timestamp.valueOf(fecha)); // Assuming fecha is in 'yyyy-mm-dd hh:mm:ss' format
             pstmt.setString(4, motivo);
 
             int filas = pstmt.executeUpdate();
@@ -33,7 +33,6 @@ public class Citas {
         } finally {
             try {
                 if (pstmt != null) pstmt.close();
-                if (connection != null) conexionBDDLocal.cerrarConexion();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

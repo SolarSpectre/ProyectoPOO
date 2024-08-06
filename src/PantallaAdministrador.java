@@ -41,6 +41,9 @@ public class PantallaAdministrador extends JFrame{
     private JLabel Resultado;
     private JTextField cedulaE;
     private JButton eliminarRegistroButton;
+    private JTextField nombrE;
+    private JButton eliminarButton;
+    private JTable examenes;
 
     private Connection connection;
 
@@ -53,6 +56,7 @@ public class PantallaAdministrador extends JFrame{
 
             agregarTablaCitas(connection);
             agregarTablaTratamientos(connection);
+            agregarTablaResultados(connection);
         } catch (SQLException e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -132,6 +136,21 @@ public class PantallaAdministrador extends JFrame{
                 }
             }
         });
+        eliminarButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    eliminarMedico();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
     }
     private void agregarTablaCitas(Connection connection) throws SQLException {
         String query = "SELECT * FROM Reporte_Citas_Por_Medico";
@@ -169,6 +188,26 @@ public class PantallaAdministrador extends JFrame{
 
         tratamientos.setModel(model);
     }
+    private void agregarTablaResultados(Connection connection) throws SQLException {
+        String query = "SELECT * FROM Resultado_Examen";
+        String[] columnas = {"id_historial_medico", "tipo_examen", "resultado", "fecha"};
+        DefaultTableModel model = new DefaultTableModel(columnas, 0);
+        model.addRow(columnas);
+        try (PreparedStatement stmt = connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                String[] fila = {
+                        rs.getString("id_historial_medico"),
+                        rs.getString("tipo_examen"),
+                        rs.getString("resultado"),
+                        rs.getString("fecha")
+                };
+                model.addRow(fila);
+            }
+        }
+
+        examenes.setModel(model);
+    }
     /**
      *
      * @throws SQLException
@@ -189,6 +228,19 @@ public class PantallaAdministrador extends JFrame{
         nombre.setText("");
         contraseña.setText("");
     }
+    public void eliminarMedico() throws SQLException {
+        String query = "DELETE FROM Usuario WHERE usuario = ?";
+        PreparedStatement pstmt = connection.prepareStatement(query);
+        pstmt.setString(1, nombrE.getText());
+        int filas = pstmt.executeUpdate();
+        if(filas > 0){
+            JOptionPane.showMessageDialog(null,"El registro ha sido eliminado correctamente");
+        }else{
+            JOptionPane.showMessageDialog(null,"No se ha eliminado ningun registro");
+        }
+        nombrE.setText("");
+    }
+
     public void ingresarPaciente() throws SQLException {
         String query = "INSERT INTO PACIENTE (cedula, n_historial_clinico, nombre, apellido, telefono, edad, descripcion_enfermedad) VALUES(?,?,?,?,?,?,?)";
         PreparedStatement pstmt = connection.prepareStatement(query);
