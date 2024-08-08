@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="Manejo de errores y login aesthetic :)">
-      <change beforePath="$PROJECT_DIR$/src/PantallaAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PantallaAdministrador.java" afterDir="false" />
-    </list>
+    <list default="true" id="5f4b2097-34d6-4b7b-803b-0b0209480852" name="Changes" comment="Comentarios en el Javadoc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +42,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/josep/Downloads/mysql-connector-j-9.0.0/mysql-connector-j-9.0.0/mysql-connector-j-9.0.0.jar",
     "onboarding.tips.debug.path": "C:/Users/POO/IdeaProjects/PruebaPOO/src/Main.java",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
@@ -116,7 +114,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723075361116</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Gestion de usuarios en la nube">
+      <option name="closed" value="true" />
+      <created>1723075909489</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723075909489</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Comentarios en el Javadoc">
+      <option name="closed" value="true" />
+      <created>1723076316033</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723076316033</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +140,8 @@
     <MESSAGE value="Refactorizar" />
     <MESSAGE value="Refactorizar y agregar mas tablas y agragar modulo de registro de resultados" />
     <MESSAGE value="Manejo de errores y login aesthetic :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manejo de errores y login aesthetic :)" />
+    <MESSAGE value="Gestion de usuarios en la nube" />
+    <MESSAGE value="Comentarios en el Javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en el Javadoc" />
   </component>
 </project>
