@@ -1,9 +1,16 @@
 import javax.swing.*;
 import java.sql.*;
 
+/**
+ * Clase para registrar citas medicas
+ */
 public class Citas {
     private ConexionBDD_Local conexionBDDLocal;
 
+    /**
+     * Obtiene la conexion de la clase conexionBDDLocal
+     * @param conexionBDDLocal
+     */
     public Citas(ConexionBDD_Local conexionBDDLocal) {
         this.conexionBDDLocal = conexionBDDLocal;
     }
