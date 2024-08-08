@@ -44,7 +44,7 @@ public class InicioSesion extends JFrame{
      */
     public void iniciar(){
         setVisible(true);
-        setSize(400,400);
+        setSize(500,200);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }

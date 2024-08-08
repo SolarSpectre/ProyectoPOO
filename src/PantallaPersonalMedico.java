@@ -46,12 +46,17 @@ public class PantallaPersonalMedico extends JFrame{
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                Tratamientos tratamientos = new Tratamientos(conexionBDDLocal);
-                tratamientos.ingresar(Integer.parseInt(historial_medico.getText()),medicamento.getText(), dosis.getText(), duracion.getText());
-                historial_medico.setText("");
-                medicamento.setText("");
-                dosis.setText("");
-                duracion.setText("");
+                try {
+                    Tratamientos tratamientos = new Tratamientos(conexionBDDLocal);
+                    tratamientos.ingresar(Integer.parseInt(historial_medico.getText()), medicamento.getText(), dosis.getText(), duracion.getText());
+                    historial_medico.setText("");
+                    medicamento.setText("");
+                    dosis.setText("");
+                    duracion.setText("");
+                }catch (Exception ex) {
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Error al registrar el tratamiento: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
         registrarCitaButton.addActionListener(new ActionListener() {
@@ -79,7 +84,12 @@ public class PantallaPersonalMedico extends JFrame{
         registrarResultadoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ingresarResultado();
+                try{
+                    ingresarResultado();
+                }catch (Exception ex) {
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Error al registrar el resultado del examen: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
     }
