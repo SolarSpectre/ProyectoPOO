@@ -34,19 +34,19 @@ Este proyecto tiene como objetivo agilizar la gestión de información médica, 
 
 ### Pantalla de Inicio de Sesión
 
-![Login](images/login.png)
-
-### Panel del Personal Médico
-
-![Panel Personal Médico](images/medical_staff_panel.png)
+![Login](login.png)
 
 ### Registro de Citas
 
-![Registro de Citas](images/appointment_registration.png)
+![Registro de Citas](citas.png)
 
-### Gestión de Pacientes (Administrador)
+### Registro de Tratamientos
 
-![Gestión de Pacientes](images/patient_management.png)
+![Registro de Tratamientos](tratamientos.png)
+
+### Reportes Estadisticos (Administrador)
+
+![Reportes Estadisticos](reportes.png)
 
 ## Instalación
 
@@ -55,3 +55,4 @@ Este proyecto tiene como objetivo agilizar la gestión de información médica, 
    git clone https://github.com/SolarSpectre/ProyectoPOO.git
 
 Para más detalles sobre la implementación y el uso de este proyecto, consulta la Guía del Usuario.
+https://youtu.be/8eer_Xh4DHQ
