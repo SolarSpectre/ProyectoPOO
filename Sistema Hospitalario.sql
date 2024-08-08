@@ -41,7 +41,7 @@ CREATE TABLE Cita (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cedula_paciente VARCHAR(10),
     id_usuario INT,
-    fecha DATETIME,
+    fecha DATETIME unique not null,
     motivo TEXT,
     FOREIGN KEY (cedula_paciente) REFERENCES Paciente(cedula),
     FOREIGN KEY (id_usuario) REFERENCES Usuario(id)
