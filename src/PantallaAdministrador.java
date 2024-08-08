@@ -2,10 +2,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  * Menu que se ejecuta al iniciar sesion como administrador
@@ -213,6 +210,7 @@ public class PantallaAdministrador extends JFrame{
      * @throws SQLException
      */
     public void ingresarMedico() throws SQLException {
+        Connection connection = conexion();
         String rol = "personal medico";
         String query = "INSERT INTO Usuario (usuario, contraseña, rol) VALUES(?,?,?)";
         PreparedStatement pstmt = connection.prepareStatement(query);
@@ -229,6 +227,7 @@ public class PantallaAdministrador extends JFrame{
         contraseña.setText("");
     }
     public void eliminarMedico() throws SQLException {
+        Connection connection = conexion();
         String query = "DELETE FROM Usuario WHERE usuario = ?";
         PreparedStatement pstmt = connection.prepareStatement(query);
         pstmt.setString(1, nombrE.getText());
@@ -240,7 +239,12 @@ public class PantallaAdministrador extends JFrame{
         }
         nombrE.setText("");
     }
-
+    public Connection conexion() throws SQLException {
+        String url = "jdbc:mysql://ujkhbignzbkn6drb:wt4yA7DMNsjsESDuPDYj@bzur1xo4hnmfvo0nrqz6-mysql.services.clever-cloud.com:3306/bzur1xo4hnmfvo0nrqz6";
+        String user = "ujkhbignzbkn6drb";
+        String password = "wt4yA7DMNsjsESDuPDYj";
+        return DriverManager.getConnection(url,user,password);
+    }
     public void ingresarPaciente() throws SQLException {
         String query = "INSERT INTO PACIENTE (cedula, n_historial_clinico, nombre, apellido, telefono, edad, descripcion_enfermedad) VALUES(?,?,?,?,?,?,?)";
         PreparedStatement pstmt = connection.prepareStatement(query);
